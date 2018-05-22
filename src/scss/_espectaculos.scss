@@ -1,0 +1,68 @@
+.espectaculos {
+    font-size: 13px;
+    max-width: 1550px;
+    margin: 20px auto;
+    padding: 8px;
+
+    & > .content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0;
+
+        & > * {
+            flex-grow: 1; 
+        }
+
+    }
+    .image {
+        margin: 8px;
+        overflow: hidden;
+        & > img{
+            width: 100%;
+            max-height: 100%;
+            transition: transform 300ms ease-out;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    .info {
+        background-color: white;
+        padding: 50px;
+        box-sizing: border-box;
+        margin: 8px;
+        font-family: 'Oswald-Light';
+        
+
+        & > h2 {
+            color: rgb(221, 69, 69);
+            text-transform: uppercase;
+            padding-bottom: 24px;
+            font-size: 25px;
+        }
+
+        & > p {
+            color:black;
+            padding-bottom: 8px;
+            font-size: 16px;
+
+            & > .b {
+                color: rgb(138, 137, 137);
+                font-size: 17px;
+
+                &::after {
+                    content: ':';
+                }
+            }
+        }
+
+    }
+    @include if-tablet {
+        & > .content {
+            & > * {
+                width: calc(50% - 16px);
+            }
+        }
+    }
+}

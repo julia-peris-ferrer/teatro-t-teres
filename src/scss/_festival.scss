@@ -1,0 +1,75 @@
+.us{
+    margin: 20px auto;
+    font-family: 'Oswald-Light';
+    max-width: 950px;
+
+    & > .about-us {
+        background-color: white;
+        text-align: left;
+        padding: 50px;
+        padding-bottom: 10px;
+        & > .work{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 50px;
+
+            & > .item{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-direction: column;
+                color: rgb(74, 188, 224);
+                border: 1px solid rgb(74, 188, 224);
+                width: 250px;
+                height: 200px;
+                margin: 10px;
+                & > .material-icons{
+                    text-align: center;
+                    font-size: 50px;
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                }
+                & > h1{
+                    font-size: 18px;
+                    text-align: center;
+                    padding: 20px;
+                    font-weight: lighter;
+                }
+            }
+
+        }
+
+        & > h4 {
+            color: rgb(74, 188, 224);
+            text-transform: uppercase;
+            padding-bottom: 10px;
+            font-size: 20px;
+            letter-spacing: 1px;
+            font-weight: lighter;
+        }
+        & > p {
+            line-height: 30px;
+            font-size: 16px;
+            color: rgb(150, 149, 149);
+            padding-bottom: 40px;
+
+            &:last-child{
+                padding-bottom: 0;
+            
+            }
+
+        }
+    
+        @include if-tablet {
+            & > .item {
+                width: calc(33% - 16px);
+            }
+        }
+        @include if-desktop {
+            & > .item {
+                width: 230px;
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.advertisement {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald-Light';
+
+    & > .window {
+        background-color: white;
+        border-radius: 2px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        padding: 40px;
+        box-sizing: border-box;
+        position: relative;
+
+        & > .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: white;
+            background-color: black;
+            border: none;
+        }
+
+        & > form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px auto;
+            text-align: center;
+            flex-direction: column;
+            max-width: 350px;
+        
+            & > * {
+                width: 300px;
+                box-sizing: border-box;
+                margin: 5px;
+            }
+
+            & input {
+                padding: 13px;
+                border: none;
+                font-size: 15px;
+                font-family: 'Oswald-Light';
+            }
+            
+            & > input[type="submit"] {
+                background-color: #2e2e2e;
+                color: white;
+                font-family: 'Oswald-Light';
+                &:hover {
+                    opacity: 0.4;
+                    cursor: pointer;
+                }
+            }
+        
+            @include if-desktop {
+                flex-direction: row;
+                max-width: auto;
+                & > * {
+                    width: auto;
+                    margin: 0 5px;
+                }
+                & > h2 {
+                    font-size: 60px;
+                }
+                & > input {
+                    width: 300px;
+                }
+        
+                & > input[type="submit"] {
+                    width: 100px;
+                }
+            }
+        
+        }
+    }
+    
+}
