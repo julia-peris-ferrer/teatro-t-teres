@@ -1,74 +1,66 @@
-.us{
+.festival {
+    font-size: 13px;
+    max-width: 1550px;
     margin: 20px auto;
-    font-family: 'Oswald-Light';
-    max-width: 950px;
+    padding: 8px;
 
-    & > .about-us {
-        background-color: white;
-        text-align: left;
-        padding: 50px;
-        padding-bottom: 10px;
-        & > .work{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 50px;
+    & > .content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        max-width: 1100px;
+        margin: auto;
 
-            & > .item{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                flex-direction: column;
-                color: rgb(74, 188, 224);
-                border: 1px solid rgb(74, 188, 224);
-                width: 250px;
-                height: 200px;
-                margin: 10px;
-                & > .material-icons{
-                    text-align: center;
-                    font-size: 50px;
-                    margin-top: 30px;
-                    margin-bottom: 20px;
-                }
-                & > h1{
-                    font-size: 18px;
-                    text-align: center;
-                    padding: 20px;
-                    font-weight: lighter;
-                }
-            }
-
+        & > * {
+            flex-grow: 1; 
         }
-
-        & > h4 {
-            color: rgb(74, 188, 224);
-            text-transform: uppercase;
-            padding-bottom: 10px;
-            font-size: 20px;
-            letter-spacing: 1px;
-            font-weight: lighter;
+        &.odd {
+            flex-direction: row-reverse; 
         }
-        & > p {
-            line-height: 30px;
-            font-size: 16px;
-            color: rgb(150, 149, 149);
-            padding-bottom: 40px;
-
-            &:last-child{
-                padding-bottom: 0;
-            
-            }
-
+        .image {
+            margin: 8px;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center;
+            min-height: 400px;
         }
+        .info {
+            background-color: white;
+            padding: 25px;
+            box-sizing: border-box;
+            margin: 8px;
+            font-family: 'Oswald-regular';
     
-        @include if-tablet {
-            & > .item {
-                width: calc(33% - 16px);
+            & > h2 {
+                color: #009BDD;
+                text-transform: uppercase;
+                padding-top: 20px;
+                padding-bottom: 40px;
+                font-size: 45px;
+            }
+            & > p {
+                color:rgb(170, 169, 169);
+                font-family: 'Oswald-light';
+                padding-bottom: 12px;
+                font-size: 20px;
+                text-align: justify;
             }
         }
-        @include if-desktop {
-            & > .item {
-                width: 230px;
+    }
+    @include if-mobile-tablet {
+        .info {
+            & > .sinopsi {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 600px;
+            }
+        }
+    }
+    @include if-tablet {
+        & > .content {
+            & > * {
+                width: calc(50% - 16px);
             }
         }
     }

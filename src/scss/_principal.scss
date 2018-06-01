@@ -1,161 +1,7 @@
 .hr{
     width: 100px;
 }
-
-.brands{
-    margin-top: 60px;
-    & > .title{
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-        & > h1{
-            color: grey;
-            font-family: Arial, Helvetica, sans-serif, monospace;
-            text-transform: uppercase;
-            font-size: 18px;
-            font-weight: lighter;
-        }
-    }
-    & > .icons{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 50px;
-        & > img{
-            width: 120px;
-            height: 120px;
-            display: block;
-            padding: 12px;
-            cursor: pointer;
-
-        }
-    }
-}
-
-.servicios {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 8px;
-    text-align: center;
-    max-width: 1270px;
-    margin: 30px auto;
-
-    & > .title{
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-
-        & > h1{
-            color: grey;
-            font-family: 'Oswald-Light';
-            text-transform: uppercase;
-            font-size: 18px;
-            font-weight: lighter;
-        }
-    }
-    
-    & > .list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 30px;
-
-        & > .item {
-            background-color: white;
-            border: 1px solid rgb(74, 188, 224);
-            width: 300px;
-            height: 250px;
-            padding: 10px;
-            cursor: pointer;
-            margin: 10px 10px;
-            transition: opacity 200ms ease-out;
-    
-            &:hover{
-                box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-                opacity: 0,4;
-                }
-            }
-    
-            & > .img {
-                background-color: white;
-                display: block;
-                padding-top: 30px;
-    
-                & > .material-icons {
-                    font-size: 60px;
-                    color: rgb(74, 188, 224)
-                }
-            }
-    
-            & > .description{
-                padding: 15px;
-                position: relative;
-                background-color: white;
-                & > h4 {
-                    color: rgb(74, 188, 224);
-                    font-family: 'Oswald-Light';
-                    text-transform: uppercase;
-                    padding-top: 44px;
-                    padding-bottom: 6px;
-                    font-size: 16px;
-                    letter-spacing: 1px;
-                }
-    
-                & > p {
-                    color: rgb(139, 139, 139);
-                    font-family: 'Oswald-Light';
-                    font-size: 15px;
-                    padding-top: 9px;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-            }
-        }
-        @include if-tablet {
-            & > .item {
-                width: calc(33% - 16px);
-            }
-        }
-        @include if-desktop {
-            & > .item {
-                width: 230px;
-            }
-        }
-
-    }
-
-.companies{
-    margin-top: 20px;
-    & > .title{
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-        & > h1{
-            color: grey;
-            font-family: 'Oswald-Light';
-            text-transform: uppercase;
-            font-size: 18px;
-            font-weight: lighter;
-        }
-    }
-    & > .icons{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 50px;
-        & > img{
-            width: 120px;
-            height: 120px;
-            display: block;
-            padding: 12px;
-            cursor: pointer;
-
-        }
-    }
-}
-.professionals{
+.name{
     margin-top: 50px;
 
     & > .title{
@@ -163,48 +9,94 @@
         display: flex;
         justify-content: center;
         & > h1{
-            color: grey;
-            font-family: 'Oswald-Light';
+            color: rgb(74, 188, 224);
+            font-family: 'Oswald-bold';
             text-transform: uppercase;
-            font-size: 18px;
+            font-size: 70px;
             font-weight: lighter;
         }
     }
-    & > .info{
+}
+#download-pdf {  // Diseño boton de  descargar PDF
+    background-color: rgb(141, 193, 209);
+    color: white;
+    margin: 10px auto;
+    padding: 10px;
+    display: block;
+    max-width: 200px;
+    text-align: center;
+
+    &:hover{
+        background-color: rgb(198, 224, 231);
+    }
+}
+.principal {
+    font-size: 13px;
+    max-width: 1550px;
+    margin: 20px auto;
+    padding: 8px;
+
+    & > .content {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        margin: 40px auto;
-        & > .text{
-            color: grey;
-            width: 350px;
-            padding: 10px 30px;
-            font-family: 'Oswald-Light';
+        margin: 10px 0;
+        max-width: 1100px;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
 
+        & > * {
+            flex-grow: 1; 
         }
-        & > .img{
-            width: 400px;
-            & > .item{
-                border: 1px solid rgb(74, 188, 224);
-                color: rgb(74, 188, 224);
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                padding: 20px;
-                margin: 10px;
+        //La clase .odd hace que se muestre en orden inverso el contenido
+        &.odd {
+            flex-direction: row-reverse; 
+        }
+        .image {
+            display: flex;
+            justify-content: center;
 
-                & > h1{
-                    font-family: 'Oswald-Light';
-                    text-transform: uppercase;
-                    font-size: 15px;
-                    font-weight: lighter;
-                }
+            img {
+                margin: 8px;
+                max-height: 400px;
+            }
+        }
+        .info {
+            background-color: white;
+            padding: 25px;
+            box-sizing: border-box;
+            margin: 8px;
+            font-family: 'Oswald-regular';
 
-                & > .material-icons{
-                    font-size: 30px;
-                    margin-right: 20px;
-                }
+            & > h2 {
+                color: #009BDD;
+                text-transform: uppercase;
+                padding-top: 20px;
+                padding-bottom: 40px;
+                font-size: 45px;
+            }
+            & > p {
+                color:rgb(170, 169, 169);
+                font-family: 'Oswald-light';
+                padding-bottom: 12px;
+                font-size: 20px;
+                text-align: justify;
+            }
+        }
+    }
+    @include if-mobile-tablet {
+        .info {
+            & > .sinopsi {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 600px;
+            }
+        }
+    }
+    @include if-tablet {
+        & > .content {
+            & > * {
+                width: calc(50% - 16px);
             }
         }
     }

@@ -1,25 +1,63 @@
+<!-- Componente PRINCIPAL de la página INICIO--> 
+
+<!-- La clase .band--> 
 <div class="band">
     <div class="carousel" id="carousel">
-         <img src="img/portada1.jpeg"/>
-         <img src="img/portada2.jpeg"/>
-         <img src="img/portada3.jpeg"/>
-         <img src="img/portada4.jpeg"/>
+         <img src="img/portada1.jpg"/>
+         <img src="img/portada2.jpg"/>
+         <img src="img/portada3.jpg"/>
+         <img src="img/portada4.jpg"/>
     </div>
 </div>
-<div class="brands">
+<!-- La clase .name muestra la información más básica del festival, contiene la clase .title y la
+clase . description.--> 
+<div class="name">
     <div class="title">
-        <h1> FESTIVAL DE TITERES</h1>
+        <h1> FESTIVAL DE TÍTERES</h1>
     </div>
-</div>
-<div class="professionals">
-    <div class="title">
-        <h1> ESPECTACULOS Y TALLERES</h1>
-    </div>
-    <div class="info">
-        <div class="text">
-            <p>Un equipo de profesionales, con experiencia le asesorará en cada momento para solucionarle cualquier necesidad de su vehículo y con la atención que Vd. se merece.</p>
+    <!-- La clase .description contiene una clase .content que sería cada punto de información--> 
+    <div class="principal">
+         <!-- La clase .content contiene una clase .image que sería la imagen que acompaña a la 
+        información de ese punto concreto y la clase .info que sería la información de ese punto.
+        La clase .content se repite hasta 3 veces porque son 3 puntos --> 
+        <div class="content">
+            <div class="info">
+                <h2>Temática Circense</h2>
+                <p>La primera edición del Festival de Títeres TI-TA-TU,
+                 va a estar ambientada en el Circo. De esta forma, se llenará de
+                  colores, alegría, payasos, diversión y juegos</p>
+            </div>
+            <div class="image">
+                <img src="/img/circense.png"></img>
+            </div>
         </div>
-
+        <div class="content odd">
+            <div class="info">
+                <h2>Espectáculos y talleres de títeres</h2>
+                <p class="sinopsi"><span class="b">Sinopsi</span>Se realizarán 6 espectáculos de títeres durante
+                el fin de semana. Además, para acompañar los espectáculos, se realizarán 6 talleres que se mantendrán activos 
+                durante ambos días, para que los niños puedan aprender y disfrutar de los diferentes estilos de títeres.</p>
+                <a target="_blank" href="img/programa.pdf" id="download-pdf">
+                    Descargar PDF
+                </a>
+            </div>
+            <div class="image">
+                <img src="/img/espectaculos.svg"></img>
+            </div>
+        </div>
+        <div class="content">
+            <div class="info">
+                <h2>¡Sorpresa!</h2>
+                <p class="sinopsi"> TI-TA-TU es un festival cargado de sorpresas, y en esta edición cada uno de los talleres
+                te da la oportunidad de obtener un premio. ¿Cómo? En cada uno de los talleres completados, se te cuñará el mapa
+                que más tarde deberás presentar en la tienda, donde tras comprobar que has reunido todos los cuños se te entregará
+                tu recompensa.   </p>
+            </div>
+            <div class="image">
+                <img src="/img/mapa.png">
+            </div>
+            </img>
+         </div>
     </div>
 </div>
 

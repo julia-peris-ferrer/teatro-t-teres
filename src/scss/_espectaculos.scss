@@ -8,55 +8,78 @@
         display: flex;
         flex-wrap: wrap;
         margin: 10px 0;
+        max-width: 1100px;
+        margin: auto;
 
         & > * {
             flex-grow: 1; 
         }
-
     }
     .image {
         margin: 8px;
         overflow: hidden;
-        & > img{
-            width: 100%;
-            max-height: 100%;
-            transition: transform 300ms ease-out;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 400px;
+
+        .my-text {
+            font-family: 'Oswald-regular';
+            color: white;
+            font-size: 80px;
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: opacity 400ms ease-in-out;
+            background-color: rgba(255, 255, 255, 0.418);
+
             &:hover {
-                transform: scale(1.2);
+                opacity: 0;
             }
         }
     }
-
     .info {
         background-color: white;
-        padding: 50px;
+        padding: 25px;
         box-sizing: border-box;
         margin: 8px;
         font-family: 'Oswald-Light';
-        
 
         & > h2 {
-            color: rgb(221, 69, 69);
+            color: #009BDD;
             text-transform: uppercase;
-            padding-bottom: 24px;
-            font-size: 25px;
+            font-family: 'Oswald-regular';
+            padding-bottom: 30px;
+            font-size: 35px;
         }
-
         & > p {
             color:black;
             padding-bottom: 8px;
             font-size: 16px;
+            text-align: justify;
 
             & > .b {
-                color: rgb(138, 137, 137);
+                color: rgb(181, 211, 224);
                 font-size: 17px;
+                text-transform: uppercase;
+                padding-right: 8px;
+                font-family: 'Oswald-regular';
 
                 &::after {
                     content: ':';
                 }
             }
         }
-
+    }
+    @include if-mobile-tablet {
+        .info {
+            & > .sinopsi {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 600px;
+            }
+        }
     }
     @include if-tablet {
         & > .content {

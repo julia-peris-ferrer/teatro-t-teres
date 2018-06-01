@@ -16,7 +16,6 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var cssnano = require("cssnano");
 
-
 gulp.task("default", ["img", "html", "sass", "js"], function(){
     browserSync.init({ server: "dist/" });
     gulp.watch(["src/scss/*.scss", "src/scss/**/*.scss"], ["sass"]);
@@ -49,23 +48,21 @@ gulp.task("html", function(){
         //.pipe(notify("HTML importado"));
 });
 
-
 gulp.task("img", function(){
     gulp.src("src/img/*") 
         .pipe(imagemin())
         .pipe(gulp.dest("dist/img/"))
 });
 
-
 gulp.task("js", function(){
     gulp.src("src/js/main.js")
         .pipe(tap(function(file){
             file.contents = browserify(file.path, {debug: true}) // añado debug: true
-                            .transform("babelify", {presets: ["es2015"]})
-                            .bundle() // compilamos el archivo
-                            .on("error", function(error){
-                              //  return notify().write(error);
-                            });
+                .transform("babelify", {presets: ["es2015"]})
+                .bundle() // compilamos el archivo
+                .on("error", function(error){
+                    //  return notify().write(error);
+                });
         }))
         .pipe(buffer())
         .pipe(sourcemaps.init({loadMaps: true})) // captura los sourcemaps del archivo fuente

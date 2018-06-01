@@ -18,6 +18,12 @@
     }
 }
 
+@mixin if-mobile-tablet{
+    @media (max-width: #{$tablet-portrait-width}) {
+        @content;
+    }
+}
+
 @mixin if-tablet-portrait {
     // De 768 en adelante
     @media (min-width: #{$tablet-portrait-width}) {

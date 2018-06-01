@@ -1,7 +1,14 @@
+/*El carousel, es la barra de imagenes que pasan solas. 
+Regirstra temporizadores, para ir cambiando la imagen cada cierto tiempo.
+Si pulsas en uno de los circulos, habré la imagen correspondiente, y la mantiene
+durante más tiempo.*/
+
 import $ from './jquery-3.3.1.min';
 
 $(window).on('load', function() {
     let carousel = document.getElementById('carousel');
+    if (carousel == null) return;
+
     let imgs = carousel.querySelectorAll('img');
     let index = 0;
     let currentImage = null;

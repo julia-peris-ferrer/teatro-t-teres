@@ -12,20 +12,26 @@
     font-family: 'Oswald-Light';
 
     & > .window {
-        background-color: white;
+        background-color: rgb(209, 224, 226);
         border-radius: 2px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
         padding: 40px;
         box-sizing: border-box;
         position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         & > .close {
             position: absolute;
             right: 0;
             top: 0;
             color: white;
-            background-color: black;
+            background-color: #009BDD;
             border: none;
+            &:hover {
+                opacity: 0.4;
+                cursor: pointer;
+            }
         }
 
         & > form {
@@ -36,6 +42,7 @@
             text-align: center;
             flex-direction: column;
             max-width: 350px;
+            padding-top: 100px;
         
             & > * {
                 width: 300px;
@@ -45,13 +52,12 @@
 
             & input {
                 padding: 13px;
-                border: none;
                 font-size: 15px;
                 font-family: 'Oswald-Light';
             }
             
             & > input[type="submit"] {
-                background-color: #2e2e2e;
+                background-color: #535353;
                 color: white;
                 font-family: 'Oswald-Light';
                 &:hover {
