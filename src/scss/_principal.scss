@@ -1,20 +1,21 @@
+/*El diseño de la pagina principal es diseño de bloques con imagen a un lado y
+imagen al otro lado, y cada bloque va alternando la imagen a izquierda y derecha*/
+
+
+
 .hr{
     width: 100px;
 }
-.name{
+.index{
     margin-top: 50px;
 
-    & > .title{
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-        & > h1{
-            color: rgb(74, 188, 224);
-            font-family: 'Oswald-bold';
-            text-transform: uppercase;
-            font-size: 70px;
-            font-weight: lighter;
-        }
+    & > h1{
+        color: rgb(74, 188, 224);
+        font-family: 'Oswald-bold';
+        text-transform: uppercase;
+        font-size: 70px;
+        font-weight: lighter;
+        text-align: center;
     }
 }
 #download-pdf {  // Diseño boton de  descargar PDF

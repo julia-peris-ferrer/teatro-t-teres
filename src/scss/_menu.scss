@@ -1,4 +1,7 @@
-/* Diseño del componente MENU mediante la clase .menu */
+/*El diseño del menu es diferente segun el tipo de pantalla, el tipo de pantalla escritorio muestra el
+menú en la parte superior debajo del logotipo, y cuando es tablet o movil, oculta el menu en la parte izquierda
+y muestra un botún  de menú que cuando lo pulsas despliega un menu en la parte izquierda, con una capa semi-
+transparente de fondo */
 
 .menu {
     list-style-type: none; /*Quitar la decoracion que se pone por defecto en las listas (puntos)*/
