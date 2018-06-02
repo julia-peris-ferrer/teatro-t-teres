@@ -1,8 +1,6 @@
 /*El diseño de la pagina principal es diseño de bloques con imagen a un lado y
 imagen al otro lado, y cada bloque va alternando la imagen a izquierda y derecha*/
 
-
-
 .hr{
     width: 100px;
 }
@@ -43,7 +41,7 @@ imagen al otro lado, y cada bloque va alternando la imagen a izquierda y derecha
         margin: 10px 0;
         max-width: 1100px;
         margin: auto;
-        justify-content: space-between;
+        justify-content: space-between; 
         align-items: center;
 
         & > * {
